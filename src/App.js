@@ -6,16 +6,13 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import store from './store'
-import { UserIsNotAuthenticated, UserIsAuthenticated } from './auth' //not handles unauthorized requests to the route
+import { UserIsNotAuthenticated, UserIsAuthenticated } from './auth'
 import Login from "./components/Login"
 import Signup from "./components/Signup"
 import Dashboard from "./components/Dashboard"
 
-
 const API_URL = 'localhost:8080'; 
 //const socket = io(API_URL);
-
-
 //import io from "socket.io-client";
 
 

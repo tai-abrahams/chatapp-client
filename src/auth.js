@@ -18,10 +18,9 @@ export const UserIsNotAuthenticated = connectedRouterRedirect({
     wrappedDisplayName: 'UserIsNotAuthenticated',
     redirectPath: (state, ownProps)=>locationHelper.getRedirectQueryParam(ownProps) || '/Dashboard',
     allowRedirectBack: false,
-    authenticatedSelector: (state)=> state.loggingUser.logged !== true, //if conditon is true, page will redirect. if condition is false, we will redirect. if username isnt existing then dont redirect
-    //authenticatingSelector: (state)=>state.loggingUser.logged === true, //i think this works if state is originally set to loading: true. The component did mount will change to loading: false or loaded: true. because this should be based on state having not loaded yet. so check should start after loaded componentDidMount
+    authenticatedSelector: (state)=> state.loggingUser.logged !== true, 
+    
     authenticatingComponent: Spinner
 })
 
 
-//change from loaded state to loading state, maybe try componentDidMount, componenet on mount will chage state to loaded. Maybe use redux dispatchstatetoprops to change the state from loading to loaded. or loaded true or false

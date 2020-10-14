@@ -17,7 +17,7 @@ const TextFormInput=({
 })=>{
     return(
         <div className={formContainer}>
-          <label className={formLabelClassName} //use bootstrap to hide label but using the props maybe call it hide
+          <label className={formLabelClassName} 
             htmlFor={name}>{label} </label>
             <input 
               autoFocus={autoFocus}
